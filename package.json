@@ -1,7 +1,7 @@
 {
   "name": "jsonsplitter",
   "productName": "JSONSplitter",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Fast, easy and reliable JSON splitter.",
   "main": "./src/main.js",
   "scripts": {
