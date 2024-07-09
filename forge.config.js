@@ -11,6 +11,7 @@ module.exports = {
           name: 'github-repo-name',
         },
         prerelease: false,
+        draft: true,
       },
     },
   ],
