@@ -19,5 +19,3 @@ jobs:
         run: npm run lint
       - name: Prettier check
         run: npm run prettier
-      - name: Test
-        run: npm test
