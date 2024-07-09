@@ -7,8 +7,8 @@ module.exports = {
       name: '@electron-forge/publisher-github',
       config: {
         repository: {
-          owner: '<Owner>',
-          name: '<RepositoryName>',
+          owner: 'VadimNastoyashchy',
+          name: 'JSONSplitter',
         },
         draft: true,
       },
