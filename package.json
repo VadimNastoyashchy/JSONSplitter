@@ -4,10 +4,12 @@
   "description": "Fast, easy and reliable JSON splitter.",
   "main": "./src/main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "electron-forge start",
     "lint": "eslint \"**/*.{js,mjs}\" --ignore-pattern node_modules/",
     "prettier": "prettier . --check",
-    "fix-formatting": "npx prettier --write ."
+    "fix-formatting": "npx prettier --write .",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "keywords": [
     "JSON",
@@ -26,6 +28,14 @@
   },
   "homepage": "https://github.com/VadimNastoyashchy/JSONSplitter#readme",
   "devDependencies": {
+    "@electron-forge/cli": "^7.4.0",
+    "@electron-forge/maker-deb": "^7.4.0",
+    "@electron-forge/maker-rpm": "^7.4.0",
+    "@electron-forge/maker-squirrel": "^7.4.0",
+    "@electron-forge/maker-zip": "^7.4.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
+    "@electron-forge/plugin-fuses": "^7.4.0",
+    "@electron/fuses": "^1.8.0",
     "electron": "^31.1.0",
     "eslint": "^8.56.0",
     "eslint-config-standard": "^17.1.0",
@@ -33,5 +43,8 @@
     "eslint-plugin-n": "^16.6.1",
     "eslint-plugin-promise": "^6.1.1",
     "prettier": "3.0.3"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
   }
 }
