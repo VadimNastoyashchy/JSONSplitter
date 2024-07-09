@@ -1,26 +1,39 @@
-name: Release app
-on:
-  workflow_dispatch:
+name: Build/release
+
+on: push
+
 jobs:
-  build:
+  release:
+    runs-on: ${{ matrix.os }}
+
     strategy:
       matrix:
-        os:
-          [
-            { name: 'linux', image: 'ubuntu-latest' },
-            { name: 'windows', image: 'windows-latest' },
-            { name: 'macos', image: 'macos-latest' },
-          ]
-    runs-on: ${{ matrix.os.image }}
+        os: [macos-latest, ubuntu-latest, windows-latest]
+
     steps:
-      - name: Github checkout
-        uses: actions/checkout@v4
-      - name: Use Node.js
-        uses: actions/setup-node@v4
+      - name: Check out Git repository
+        uses: actions/checkout@v1
+
+      - name: Install Node.js, NPM and Yarn
+        uses: actions/setup-node@v1
         with:
-          node-version: 20
-      - run: npm install
-      - name: Publish app
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: npm run publish
+          node-version: 16
+
+      - name: Build/release Electron app
+        uses: wenwuwu/action-electron-forge@v1.4.0
+        with:
+          # GitHub token, automatically provided to the action
+          # (No need to define this secret in the repo settings)
+          github_token: ${{ secrets.GH_TOKEN }}
+
+          # If the commit is tagged with a version (e.g. "v1.0.0"),
+          # release the app after building
+          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
+
+# Releasing
+# When you want to create a new release, follow these steps:
+
+# Update the version in your project's package.json file (e.g. 1.2.3)
+# Commit that change (git commit -am v1.2.3)
+# Tag your commit (git tag v1.2.3). Make sure your tag name's format is v*.*.*. Your workflow will use this tag to detect when to create a release
+# Push your changes to GitHub (git push && git push --tags)
