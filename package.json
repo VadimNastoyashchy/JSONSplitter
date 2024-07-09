@@ -1,0 +1,25 @@
+{
+  "name": "jsonsplitter",
+  "version": "1.0.0",
+  "description": "Fast, easy and reliable JSON splitter.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "JSON",
+    "JSONSplitter",
+    "split",
+    "Application"
+  ],
+  "author": "Vadym Nastoiashchyi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VadimNastoyashchy/JSONSplitter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VadimNastoyashchy/JSONSplitter/issues"
+  },
+  "homepage": "https://github.com/VadimNastoyashchy/JSONSplitter#readme"
+}
