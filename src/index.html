@@ -18,13 +18,15 @@
         objects into small chunks.
       </p>
     </div>
-    <button id="splitBtn" disabled="disabled">Run Splitting</button>
-    <br />
+    <div id="buttonsContainer">
+      <button id="splitBtn" disabled="disabled">Run Splitting</button>
+      <button id="deleteBtn">Clear</button>
+    </div>
     <p id="progressBar"></p>
-    <br />
-    <div id="drop-area">Drag & Drop your file here</div>
-    <br />
-    <div id="fileNames"></div>
+    <div id="main">
+      <div id="drop-area">Drag & Drop your file here</div>
+      <div id="fileNames"></div>
+    </div>
     <script src="./renderer.js"></script>
   </body>
 </html>

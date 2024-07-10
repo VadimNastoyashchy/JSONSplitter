@@ -1,40 +1,89 @@
+body {
+  font-family: Arial, sans-serif; /* Set a more readable font */
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; /* Set a light background color */
+}
+
 #header {
   display: flex;
   align-items: center;
+  justify-content: center;
+  background-color: #007399;
+  color: #e9e7e7;
 }
 
 #logo {
-  max-width: 325px;
-  max-height: 325px;
-  display: block;
+  max-width: 300px;
+  max-height: 300px;
   margin-right: 15px;
 }
 
 #title {
   flex-grow: 1;
+  font-size: x-large;
+}
+
+#main {
+  display: flex;
+  justify-content: space-evenly; /* space between `#drop-area` and `#fileNames` */
 }
 
 #drop-area {
-  width: 400px;
+  width: 200px;
   height: 100px;
-  border: 1px solid black;
+  border: 2px dashed #007399;
   text-align: center;
-  margin: 0 auto;
+  padding: 50px;
+  color: #007399;
+  margin: 20px;
 }
 
 #fileNames {
-  max-height: 100px;
+  width: 200px;
+  height: 200pxx;
   overflow-y: auto;
-  border: 1px solid grey;
+  padding: 20px;
+  border: 1px solid #007399;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+#drop-area:hover {
+  background-color: #e8f4fa;
 }
 
 #progressBar {
   text-align: center;
-  margin: 0 auto;
+  font-size: 1.5em;
+  margin: 20px auto;
+  color: #007399;
 }
 
-#splitBtn {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+#buttonsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px;
+  display: inline-flex; /* Align text in the center */
+  justify-content: center; /* Align text in the center */
+  align-items: center; /* Align text in the center */
+  border: none;
+  background-color: #007399;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transition effect */
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+
+button:hover:not(:disabled) {
+  background-color: #005377; /* Darker shade when hovered */
 }

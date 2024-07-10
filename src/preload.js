@@ -1,12 +1,24 @@
 /* eslint-disable space-before-function-paren */
 const fs = require('fs')
 const path = require('node:path')
+const { exec } = require('child_process')
 
 let filesToProcess = null
 
 window.addEventListener('DOMContentLoaded', () => {
   const splitBtn = document.getElementById('splitBtn')
   const progressText = document.getElementById('progressBar')
+  const deleteBtn = document.getElementById('deleteBtn')
+  const fileNamesDiv = document.getElementById('fileNames')
+
+  deleteBtn.addEventListener('click', async () => {
+    deleteBtn.disabled = true
+    progressText.innerText = 'Clearing...'
+    filesToProcess = null
+    fileNamesDiv.innerHTML = ''
+    progressText.innerText = 'Clear!'
+    deleteBtn.disabled = false
+  })
 
   splitBtn.addEventListener('click', async () => {
     splitBtn.disabled = true
@@ -38,7 +50,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const files = dt.files
 
     // Add opened file names to list
-    const fileNamesDiv = document.getElementById('fileNames')
     fileNamesDiv.innerHTML = ''
     Array.from(files).forEach((file) => {
       let p = document.createElement('p')
@@ -97,5 +108,16 @@ const splitJsonArray = (files, limit = 5000) => {
     }
   } catch (e) {
     console.error('Error parsing JSON:', e)
+  }
+  const outputDir = path.join(__dirname, '../output')
+  switch (process.platform) {
+    case 'win32':
+      exec(`start "" "${outputDir}"`)
+      break
+    case 'darwin':
+      exec(`open "${outputDir}"`)
+      break
+    default:
+      exec(`xdg-open "${outputDir}"`)
   }
 }
