@@ -1,3 +1,4 @@
+/* eslint-disable space-before-function-paren */
 window.addEventListener('DOMContentLoaded', () => {
   const dropArea = document.getElementById('drop-area')
 
