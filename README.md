@@ -19,7 +19,9 @@
   Fast, easy and reliable JSON splitter!
 </p>
 
-## Getting started
+# Getting started
+
+## Clone the repo
 
 > Before you follow the steps below, make sure you have the
 
