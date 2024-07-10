@@ -1,6 +1,23 @@
-# JSONSplitter
+<p align="center">
+  <a href="./logo/logo.png">
+    <picture>
+      <img alt="JSONSplitter" src="./logo/logo.png">
+    </picture>    
+  </a>
+</p>
 
-Fast, easy and reliable JSON splitter.
+<p align="center">
+  <a href="./CHANGELOG.md">Release Notes / History / Changes</a> 
+</p>
+<p align="center">
+  <a href="./CONTRIBUTING.md">Contributing</a> 
+</p>
+<p align="center">
+  <a href="https://github.com/VadimNastoyashchy/JSONSplitter/issues">Issue Tracker</a> 
+</p>
+<p align="center" style="font-size:120%;">
+  Fast, easy and reliable JSON splitter!
+</p>
 
 ## Getting started
 
