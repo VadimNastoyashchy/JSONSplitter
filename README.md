@@ -21,21 +21,20 @@
 
 # Getting started
 
-## Clone the repo
+## 1. Clone the repo
+
+## 2. Installing
 
 > Before you follow the steps below, make sure you have the
 
 [Node.js](https://nodejs.org/en/download/) installed _globally_ only your system
 
-## Installing
-
-Install RealTestJS for Mac, Linux, or Windows:
 
 ```bash
 npm install
 ```
 
-## Running
+## 3. Running
 
 Install RealTestJS for Mac, Linux, or Windows:
 
