@@ -1,7 +1,7 @@
 <p align="center">
-  <a href="./logo/logo.png">
+  <a href="./logo/demo.png">
     <picture>
-      <img alt="JSONSplitter" src="./logo/logo.png">
+      <img alt="JSONSplitter" src="./logo/demo.png">
     </picture>    
   </a>
 </p>
