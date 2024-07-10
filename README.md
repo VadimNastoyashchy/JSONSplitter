@@ -29,7 +29,6 @@
 
 [Node.js](https://nodejs.org/en/download/) installed _globally_ only your system
 
-
 ```bash
 npm install
 ```

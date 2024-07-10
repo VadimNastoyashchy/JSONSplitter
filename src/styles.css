@@ -88,7 +88,7 @@ button:hover:not(:disabled) {
   background-color: #005377; /* Darker shade when hovered */
 }
 
-input[type="number"] {
+input[type='number'] {
   width: 750px;
   height: 40px;
   margin: 20px 0;
