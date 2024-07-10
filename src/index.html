@@ -10,19 +10,21 @@
 
     <link rel="stylesheet" type="text/css" href="./styles.css" />
   </head>
-
   <body>
-    <picture>
+    <div id="header">
       <img id="logo" alt="JSONSplitter" src="../logo/logo.png" />
-    </picture>
-    <p id="title">
-      JSONSplitter is designed to split a large JSON file/files containing
-      objects into small chunks.
-    </p>
-
+      <p id="title">
+        JSONSplitter is designed to split a large JSON file/files containing
+        objects into small chunks.
+      </p>
+    </div>
+    <button id="splitBtn" disabled="disabled">Run Splitting</button>
+    <br />
+    <p id="progressBar"></p>
     <br />
     <div id="drop-area">Drag & Drop your file here</div>
-
+    <br />
+    <div id="fileNames"></div>
     <script src="./renderer.js"></script>
   </body>
 </html>

@@ -1,14 +1,17 @@
+#header {
+  display: flex;
+  align-items: center;
+}
+
 #logo {
-  width: 600px;
-  height: 400px;
+  max-width: 325px;
+  max-height: 325px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-right: 15px;
 }
 
 #title {
-  text-align: center;
-  margin: 0 auto;
+  flex-grow: 1;
 }
 
 #drop-area {
@@ -17,4 +20,21 @@
   border: 1px solid black;
   text-align: center;
   margin: 0 auto;
+}
+
+#fileNames {
+  max-height: 100px;
+  overflow-y: auto;
+  border: 1px solid grey;
+}
+
+#progressBar {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#splitBtn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
