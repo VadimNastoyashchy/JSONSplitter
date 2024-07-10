@@ -52,7 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // Add opened file names to list
     fileNamesDiv.innerHTML = ''
     Array.from(files).forEach((file) => {
-      let p = document.createElement('p')
+      const p = document.createElement('p')
       p.textContent = file.name
       fileNamesDiv.append(p)
     })
