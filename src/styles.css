@@ -1,9 +1,12 @@
-#title {
-  text-align: center;
-  margin: 0 auto;
+#logo {
+  width: 600px;
+  height: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#sub-title {
+#title {
   text-align: center;
   margin: 0 auto;
 }
