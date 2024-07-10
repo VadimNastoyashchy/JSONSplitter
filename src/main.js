@@ -1,6 +1,3 @@
-// main.js
-
-// Modules to control application life and create native browser window
 const { app, BrowserWindow } = require('electron')
 const path = require('node:path')
 
@@ -18,7 +15,7 @@ const createWindow = () => {
   mainWindow.loadFile(path.join(__dirname, '../src/index.html'))
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished

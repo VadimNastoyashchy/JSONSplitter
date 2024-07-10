@@ -1,4 +1,3 @@
-<!--index.html-->
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,14 +7,19 @@
       content="default-src 'self'; script-src 'self'"
     />
     <title>JSONSplitter</title>
-  </head>
-  <body>
-    <h1>JSONSplitter</h1>
-    We are using Node.js <span id="node-version"></span>, Chromium
-    <span id="chrome-version"></span>, and Electron
-    <span id="electron-version"></span>.
 
-    <!-- You can also require other files to run in this process -->
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+  </head>
+
+  <body>
+    <h1 id="title">JSONSplitter</h1>
+    <p id="sub-title">
+      JSONSplitter is designed to split a large JSON file/files containing
+      objects into small chunks.
+    </p>
+    <br />
+    <div id="drop-area">Drag & Drop your file here</div>
+
     <script src="./renderer.js"></script>
   </body>
 </html>

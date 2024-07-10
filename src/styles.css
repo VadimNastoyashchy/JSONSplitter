@@ -1,3 +1,17 @@
-/* styles.css */
+#title {
+  text-align: center;
+  margin: 0 auto;
+}
 
-/* Add styles here to customize the appearance of your app */
+#sub-title {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#drop-area {
+  width: 400px;
+  height: 100px;
+  border: 1px solid black;
+  text-align: center;
+  margin: 0 auto;
+}
