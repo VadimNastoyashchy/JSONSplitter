@@ -21,9 +21,12 @@ window.addEventListener('DOMContentLoaded', () => {
   })
 
   splitBtn.addEventListener('click', async () => {
+    const limitInput = document.getElementById('limit')
+    const limit = limitInput.value || 5000 // Use input value if provided, else default to 5000
+
     splitBtn.disabled = true
     progressText.innerText = 'Splitting in progress...'
-    await splitJsonArray(filesToProcess) // Run the split operation
+    await splitJsonArray(filesToProcess, limit) // pass the limit here
     progressText.innerText = 'Splitting complete!'
     splitBtn.disabled = false
   })
@@ -85,7 +88,7 @@ const parseMultipleJson = (files) => {
   return multipleJson
 }
 
-const splitJsonArray = (files, limit = 5000) => {
+const splitJsonArray = (files, limit) => {
   try {
     const source = parseMultipleJson(files)
     const flattedSource = source?.flat()

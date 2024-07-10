@@ -14,8 +14,8 @@ body {
 }
 
 #logo {
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 200px;
+  max-height: 200px;
   margin-right: 15px;
 }
 
@@ -86,4 +86,15 @@ button:disabled {
 
 button:hover:not(:disabled) {
   background-color: #005377; /* Darker shade when hovered */
+}
+
+input[type="number"] {
+  width: 750px;
+  height: 40px;
+  margin: 20px 0;
+  padding: 0 10px;
+  border: 1px solid #007399;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #007399;
 }
