@@ -15,6 +15,7 @@ Install RealTestJS for Mac, Linux, or Windows:
 ```bash
 npm install
 ```
+
 ## Running
 
 Install RealTestJS for Mac, Linux, or Windows:
