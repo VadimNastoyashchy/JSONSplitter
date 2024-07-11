@@ -21,9 +21,6 @@
 
 # Getting started
 
-Download DMG for MAC OS >>> 
-[JSONSplitter](./app_out/mac_os/JSONSplitter-1.1.1-arm64.dmg)
-
 ## 1. Clone the repo
 
 ## 2. Installing
