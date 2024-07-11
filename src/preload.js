@@ -10,6 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const progressText = document.getElementById('progressBar')
   const deleteBtn = document.getElementById('deleteBtn')
   const fileNamesDiv = document.getElementById('fileNames')
+  const limitInput = document.getElementById('limit')
 
   deleteBtn.addEventListener('click', async () => {
     deleteBtn.disabled = true
@@ -17,18 +18,26 @@ window.addEventListener('DOMContentLoaded', () => {
     filesToProcess = null
     fileNamesDiv.innerHTML = ''
     progressText.innerText = 'Clear!'
-    deleteBtn.disabled = false
+    deleteBtn.disabled = true
+    splitBtn.disabled = true
   })
 
   splitBtn.addEventListener('click', async () => {
-    const limitInput = document.getElementById('limit')
+    if (limitInput.value <= 0) {
+      progressText.innerText =
+        'ERROR! expected number of limit records per file should be more than 0'
+      return
+    }
     const limit = limitInput.value || 5000 // Use input value if provided, else default to 5000
 
     splitBtn.disabled = true
+    deleteBtn.disabled = true
     progressText.innerText = 'Splitting in progress...'
     await splitJsonArray(filesToProcess, limit) // pass the limit here
     progressText.innerText = 'Splitting complete!'
     splitBtn.disabled = false
+    deleteBtn.disabled = false
+    openOutputFolder()
   })
   const dropArea = document.getElementById('drop-area')
 
@@ -62,6 +71,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     filesToProcess = files
     splitBtn.disabled = false
+    deleteBtn.disabled = false
     progressText.innerText = ''
   }
 
@@ -112,6 +122,9 @@ const splitJsonArray = (files, limit) => {
   } catch (e) {
     console.error('Error parsing JSON:', e)
   }
+}
+
+const openOutputFolder = () => {
   const outputDir = path.join(__dirname, '../output')
   switch (process.platform) {
     case 'win32':

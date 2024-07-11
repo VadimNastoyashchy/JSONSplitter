@@ -89,12 +89,12 @@ button:hover:not(:disabled) {
 }
 
 input[type='number'] {
-  width: 750px;
-  height: 40px;
-  margin: 20px 0;
-  padding: 0 10px;
+  width: calc(100% - 40px);
+  padding: 10px 20px;
   border: 1px solid #007399;
   border-radius: 5px;
   font-size: 16px;
   color: #007399;
+  margin: 0 auto;
+  display: block;
 }
