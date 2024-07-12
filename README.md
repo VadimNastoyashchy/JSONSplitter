@@ -21,7 +21,7 @@
 
 # Getting started
 
-## 1. Clone the repo
+## 1. Clone the repo or download latest [Source Zip](https://github.com/VadimNastoyashchy/JSONSplitter/releases)
 
 ## 2. Installing
 
