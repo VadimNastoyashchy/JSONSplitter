@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
         'ERROR! expected number of limit records per file should be more than 0'
       return
     }
-    const limit = limitInput.value || 5000 // Use input value if provided, else default to 5000
+    const limit = limitInput.value || 1 // Use input value if provided, else default to 5000
 
     splitBtn.disabled = true
     deleteBtn.disabled = true
