@@ -1,8 +1,8 @@
 {
-  "name": "jsonsplitter",
+  "name": "ui-json-splitter",
   "productName": "JSONSplitter",
   "version": "1.1.1",
-  "description": "Fast, easy and reliable JSON splitter.",
+  "description": "Fast, easy and reliable UI JSON splitter.",
   "main": "./src/main.js",
   "scripts": {
     "lint": "eslint \"**/*.{js,mjs}\" --ignore-pattern node_modules/",
