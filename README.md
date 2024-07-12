@@ -21,21 +21,19 @@
 
 # Getting started
 
-## 1. Clone the repo or download latest [Source Zip](https://github.com/VadimNastoyashchy/JSONSplitter/releases)
-
-## 2. Installing
+## 1. Clone the repo / or download latest [Source code (zip)](https://github.com/VadimNastoyashchy/JSONSplitter/releases)
 
 > Before you follow the steps below, make sure you have the
 
 [Node.js](https://nodejs.org/en/download/) installed _globally_ only your system
+
+## 2. Installing (Open the JSONSplitter root directory)
 
 ```bash
 npm install
 ```
 
 ## 3. Running
-
-Install RealTestJS for Mac, Linux, or Windows:
 
 ```bash
 npm run start
